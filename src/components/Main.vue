@@ -1,0 +1,164 @@
+<template>
+    <main>
+        <section id="partner-section" class="d-flex justify-content-between bg-danger mt-3">
+            <div class="text-white d-flex flex-column align-items-start justify-content-center px-5 mx-5">
+                <h1>Udemy Affiliate Sales</h1>
+                <p>Monetize your audience and attract new customers with Udemy!</p>
+            </div>
+            <img src="./../assets/slide-1.jpg" alt="udemy">
+        </section>
+        <section id="popular-development-section" class="p-5">
+            <h2>Popular Development Courses</h2>
+            <ContentLoader :data="courses" class="py-5"></ContentLoader>
+        </section>
+        <section id="banner-section" class="d-flex align-items-center">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-4 offset-2 text-container">
+                        <h1 class="fw-bold">
+                            Limitless learning, <br>
+                            more possibilities
+                        </h1>
+                        <p class="py-3">
+                            Online courses open the opportunity for learning to almost anyone, regardless of their scheduling commitments.
+                        </p>
+                        <button class="btn btn-danger">READ MORE</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="recent-section" class="py-5 text-center">
+            <h1 class="text-center">Recent courses</h1>
+            <ul class="list-unstyled my-5 d-flex justify-content-center gap-3 text-aegean">
+                <li class="active">All Categories</li>
+                <li>Business</li>
+                <li>Design</li>
+                <li>Development</li>
+                <li>IT & Software</li>
+                <li>Lifestyle</li>
+                <li>Marketing</li>
+                <li>Office Productivity</li>
+            </ul>
+            <ContentLoader :data="courses" class="py-5"></ContentLoader>
+            <ContentLoader :data="courses" class="py-5"></ContentLoader>
+            <button class="btn btn-danger">SHOW ALL</button>
+        </section>
+        <section id="subscribe-section" class="bg-danger py-5">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-4 offset-2">
+                        <h4 class="text-white">Subscribe our newsletter</h4>  
+                        <p class="text-white">
+                            There are many variations of passages of Lorem Ipsum avaiable, but the majority have suffered 
+                            alteration in some form, by injected humour, or randomized words.
+                        </p>
+                    </div>
+                    <div class="col-4">
+                        <label for="emailInput" class="my-3 text-white">YOUR E-MAIL ADRESS</label>
+                        <div class="input-group d-flex flex-nowrap">
+                            <input id="emailinput" type="text" class="form-control form-control-lg rounded-0 bg-light-grey" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Enter Your E-Mail">
+                            <span class="input-group-text btn-aegean rounded-0" id="inputGroup-sizing-default">SUBSCRIBE</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="popular-section" class="text-center py-5">
+            <h1>Popular courses</h1>
+            <h4 class="text-grey fw-normal">Dicover our most popular courses for self learning</h4>
+            <ContentLoader :data="courses" class="py-5"></ContentLoader>
+        </section>
+    </main>
+</template>
+<script>
+import ContentLoader from '../subcomponents/ContentLoader'
+export default {
+  components: { ContentLoader },
+    name : 'Main',
+    data(){
+        return {
+            courses:[
+                {
+                    title: 'The complete IOS 10 & Swift 3 Developer Course',
+                    category: 'Development',
+                    src: require('./../assets/ios-bg-2.jpg'),
+                    rated: 4,
+                    price: 199.99,
+                    discountedPrice : 100
+                },
+                {
+                    title: 'Web Design for Beginners: Real Word Coding in HTML & CSS',
+                    category: 'Development',
+                    src: require('./../assets/web-design-bg.jpg'),
+                    rated: 5,
+                    price: 129.99,
+                    discountedPrice : 65
+                },
+                {
+                    title: 'GitHub Ultimate: Master Git and GitHub - Beginner to Expert',
+                    category: 'Development',
+                    src: require('./../assets/github-bg.jpg'),
+                    rated: 4,
+                    price: 99.99,
+                    discountedPrice : 50
+                },
+                {
+                    title: 'The complete IOS 11 & Swift Developer Course - Build 20 Apps',
+                    category: 'Development',
+                    src: require('./../assets/ios-bg-1.jpg'),
+                    rated: 4,
+                    price: 199.99,
+                    discountedPrice : 100
+                },
+                {
+                    title: 'Android Java Masterclass - Become an App Developer',
+                    category: 'Development',
+                    src: require('./../assets/android-java-bg.jpg'),
+                    rated: 4,
+                    price: 99.99,
+                    discountedPrice : 50
+                },
+                {
+                    title: 'Xamarine forms: Build Native Cross-Platform Apps with C#',
+                    category: 'Development',
+                    src: require('./../assets/xamarin-bg.jpg'),
+                    rated: 4,
+                    price: 199.99,
+                    discountedPrice : 100
+                }
+            ]
+        }
+    }
+}
+</script>
+<style scoped lang="scss">
+@import './../styles/variables.scss';
+h1{
+    font-size: 42px;
+}
+#partner-section{
+    img{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 32% 100%);
+        max-width: 50%;
+        height: 400px;
+    }
+}
+#banner-section{
+    height: 400px;
+    background-image: url('./../assets/bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    white-space: pre-line !important;
+}
+#recent-section{
+    .active{
+        background-color: $light-grey;
+        color: $grey;
+        border-radius: 15px;
+    }
+    li{
+        padding: 0.5rem 1rem
+    }
+}
+</style>

@@ -1,0 +1,61 @@
+$grey : #afafaf;
+$light-grey : #f0f2f5;
+$dark-grey: #777777;
+$dark-blue: #273044;
+$aegean-blue: #457992;
+$dark-blue: #262f43;
+$header-dark: #1A273D;
+$danger: #FF4450;
+$fs-s: 12px;
+$fs-xs: 14px;
+$fs-normal: 16px;
+$fs-lg-1: 18px;
+$fs-lg-2: 22px;
+$fs-lg-3: 26px;
+$fs-lg-4: 32px;
+*{
+  
+}
+.text-grey{
+    color: $grey
+}
+.text-aegean{
+    color: $aegean-blue
+}
+.text-dark-grey{
+    color: $dark-grey
+}
+.text-light-grey{
+    color: $light-grey
+}
+.bg-light-grey{
+    background-color: $light-grey
+}
+.bg-grey{
+    background-color: $grey;
+}
+.bg-danger{
+    background-color: $danger;
+}
+.btn-aegean{
+    background-color: $aegean-blue;
+    color: white
+}
+button{
+    white-space: nowrap;
+}
+.btn-danger{
+    background-color: $danger;
+    color: white !important; 
+    border: solid $danger;
+    border-radius: 30px;
+    padding: 1rem;
+    font-weight: bold;
+}
+.btn-white{
+    background-color: white;
+    color: $aegean-blue;
+}
+.bg-dark-blue{
+    background-color: $dark-blue;
+}
