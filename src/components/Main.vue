@@ -68,6 +68,45 @@
             <h4 class="text-grey fw-normal">Dicover our most popular courses for self learning</h4>
             <ContentLoader :data="courses" class="py-5"></ContentLoader>
         </section>
+        <section id="join-section" class="py-5">
+            <div class="container-fluid">
+                <div class="row d-flex justify-content-around">
+                    <div class="col-5 d-flex gap-3 align-items-center p-5">
+                        <img src="./../assets/instructor.png" alt="instructor img">
+                        <div class=" d-flex flex-column">
+                            <h3>Become an Instructor</h3>
+                            <h4>Teach what you love. Masterstudy gives you the tools to create a course</h4>
+                            <button class="btn btn-danger">START TEACHING</button>
+                        </div>
+                    </div>
+                    <div class="col-5 d-flex gap-3 align-items-center p-5">
+                        <img src="./../assets/business.png" alt="business img">
+                        <div class=" d-flex flex-column">
+                            <h3>Access For Business</h3>
+                            <h4>Get unlimited access to 2,500 of top courses for your team</h4>
+                            <button class="btn btn-danger">DOING BUSINESS</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="future-section" class="py-5">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-5 offset-2 py-5 my-5 bg-white">
+                        <h2>Investing for Your Future</h2>
+                        <p>
+                            It is no exaggeration to say this MasterStudy experience was transformative-both professionally and personally
+                            This workshop will long remain a high point of my life. Thanks again... i am feeling energized and eager to start teaching
+                            my class next week. I can't wait to use all of my new teaching tools. I will absolutely reccomend this workshop to
+                            other educators!
+                        </p>
+                        <h5>Linda Green</h5>
+                        <h6>Product Manage, Apple inc.</h6>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 </template>
 <script>
@@ -160,5 +199,15 @@ h1{
     li{
         padding: 0.5rem 1rem
     }
+}
+#join-section{
+    .col-5{
+        border: solid 1px $grey
+    }
+}
+#future-section{
+    background-image: url('./../assets/testimonial-1-1917x640-1-1914x639.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 </style>
