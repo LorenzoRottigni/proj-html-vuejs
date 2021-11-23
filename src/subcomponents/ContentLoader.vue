@@ -11,18 +11,14 @@
                     <div class="d-flex justify-content-between align-items-center">
                         <div class="star-container">
                             <i :key="'star-'+index" v-for="(star, index)  in content.rated" class="fa fa-star text-gold"></i>
-                            <i :key="'star-'+index" v-for="(star, index)  in (5 - content.rated)" class="fa fa-star text-grey"></i>
+                            <i :key="'star-empty-'+index" v-for="(star, index)  in (5 - content.rated)" class="fa fa-star text-grey"></i>
                         </div>
                         <div class="price-container d-flex flex-column align-items-end text-right">
                             <h4 class="text-right my-0">{{content.price}}</h4>
                             <h3>{{content.discountedPrice}}</h3>
                         </div>
                     </div>
-                    
                 </div>
-                
-                
-                
             </div>
         </div>
     </div>

@@ -3,12 +3,12 @@
         <section id="partner-section" class="d-flex justify-content-between bg-danger mt-3">
             <div class="text-white d-flex flex-column align-items-start justify-content-center px-5 mx-5">
                 <h1>Udemy Affiliate Sales</h1>
-                <p>Monetize your audience and attract new customers with Udemy!</p>
+                <h2>Monetize your audience and attract new customers with Udemy!</h2>
             </div>
             <img src="./../assets/slide-1.jpg" alt="udemy">
         </section>
         <section id="popular-development-section" class="p-5">
-            <h2>Popular Development Courses</h2>
+            <h1>Popular Development Courses</h1>
             <ContentLoader :data="courses" class="py-5"></ContentLoader>
         </section>
         <section id="banner-section" class="d-flex align-items-center">
@@ -19,16 +19,16 @@
                             Limitless learning, <br>
                             more possibilities
                         </h1>
-                        <p class="py-3">
+                        <h2 class="py-3">
                             Online courses open the opportunity for learning to almost anyone, regardless of their scheduling commitments.
-                        </p>
+                        </h2>
                         <button class="btn btn-danger">READ MORE</button>
                     </div>
                 </div>
             </div>
         </section>
         <section id="recent-section" class="py-5 text-center">
-            <h1 class="text-center">Recent courses</h1>
+            <h3 class="text-center">Recent courses</h3>
             <ul class="list-unstyled my-5 d-flex justify-content-center gap-3 text-aegean">
                 <li class="active">All Categories</li>
                 <li>Business</li>
@@ -65,7 +65,7 @@
         </section>
         <section id="popular-section" class="text-center py-5">
             <h1>Popular courses</h1>
-            <h4 class="text-grey fw-normal">Dicover our most popular courses for self learning</h4>
+            <h2>Dicover our most popular courses for self learning</h2>
             <ContentLoader :data="courses" class="py-5"></ContentLoader>
         </section>
         <section id="join-section" class="py-5">
@@ -74,7 +74,7 @@
                     <div class="col-5 d-flex gap-3 align-items-center p-5">
                         <img src="./../assets/instructor.png" alt="instructor img">
                         <div class=" d-flex flex-column">
-                            <h3>Become an Instructor</h3>
+                            <h4>Become an Instructor</h4>
                             <h4>Teach what you love. Masterstudy gives you the tools to create a course</h4>
                             <button class="btn btn-danger">START TEACHING</button>
                         </div>
@@ -82,7 +82,7 @@
                     <div class="col-5 d-flex gap-3 align-items-center p-5">
                         <img src="./../assets/business.png" alt="business img">
                         <div class=" d-flex flex-column">
-                            <h3>Access For Business</h3>
+                            <h4>Access For Business</h4>
                             <h4>Get unlimited access to 2,500 of top courses for your team</h4>
                             <button class="btn btn-danger">DOING BUSINESS</button>
                         </div>
@@ -94,10 +94,10 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-5 offset-2 py-5 my-5 bg-white">
-                        <h2>Investing for Your Future</h2>
+                        <h4>Investing for Your Future</h4>
                         <p>
                             It is no exaggeration to say this MasterStudy experience was transformative-both professionally and personally
-                            This workshop will long remain a high point of my life. Thanks again... i am feeling energized and eager to start teaching
+                            This workshop will long remain a high point of my life. Thanks again... i am feeling energized and eager to kt teaching
                             my class next week. I can't wait to use all of my new teaching tools. I will absolutely reccomend this workshop to
                             other educators!
                         </p>
@@ -111,6 +111,8 @@
 </template>
 <script>
 import ContentLoader from '../subcomponents/ContentLoader'
+import axios from 'axios'
+
 export default {
   components: { ContentLoader },
     name : 'Main',
@@ -165,15 +167,52 @@ export default {
                     price: 199.99,
                     discountedPrice : 100
                 }
-            ]
+            ],
+            url : 'https://www.udemy.com/api-2.0',
+            token : 'Basic ZnQ5UVloMjlOWmxoSFJYU0FGVldUM0pJdnFTUktlQWg3ejhLZ2dNZzp1U3Y0WTdKaGEzV2tONktNSWZmWnhHbTVrb0tvYTdMbThpVm5qOWVoNlhNaG9wQlJRMUNqMXZkaUI1SlNvTFU1bk0yVURXMjZ2OFVYeFM2QmRoaDA0YjhEaXV1MG5QZ3RxY3VadFhXSXVzM29ZY0Nla2ZiYkpDSmJUMUVoZmlvWQ=='
         }
+    },
+    methods : {
+
+        performCallAPI(category, id){
+            if(id === undefined)
+                id=''
+            if(category === undefined)
+                category=''
+            console.log(`${this.url}/${category}/${id}`)
+            axios.get(`${this.url}/${category}/${id}`, { 'headers': {
+                "Accept": "application/json, text/plain, */*",
+                "Authorization": "Basic ZnQ5UVloMjlOWmxoSFJYU0FGVldUM0pJdnFTUktlQWg3ejhLZ2dNZzp1U3Y0WTdKaGEzV2tONktNSWZmWnhHbTVrb0tvYTdMbThpVm5qOWVoNlhNaG9wQlJRMUNqMXZkaUI1SlNvTFU1bk0yVURXMjZ2OFVYeFM2QmRoaDA0YjhEaXV1MG5QZ3RxY3VadFhXSXVzM29ZY0Nla2ZiYkpDSmJUMUVoZmlvWQ==",
+                "Content-Type": "application/json;charset=utf-8",
+                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Methods": "GET, POST, PATCH, PUT, DELETE, OPTIONS",
+                "Access-Control-Allow-Headers": "Origin, Content-Type, X-Auth-Token",
+                "useCredentails": "true",
+                "changeOrigin": "true",
+            }}).then((response) => {
+                    console.log(response.data)
+            });
+        }
+    },
+    mounted(){
+        this.performCallAPI('courses')
     }
 }
 </script>
 <style scoped lang="scss">
 @import './../styles/variables.scss';
+/* partner section, banner section, recent section, popular section */
 h1{
     font-size: 42px;
+}
+/* partner section, banner section, popular section*/
+h2{
+    font-size: 22px;
+    font-weight: normal;
+}
+/* recent section */
+h3{
+
 }
 #partner-section{
     img{
