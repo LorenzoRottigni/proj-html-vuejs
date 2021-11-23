@@ -9,7 +9,8 @@
         </section>
         <section id="popular-development-section" class="p-5">
             <h1>Popular Development Courses</h1>
-            <ContentLoader :data="courses" class="py-5"></ContentLoader>
+            <!--<ContentLoader :data="courses" class="py-5"></ContentLoader>-->
+            <ContentLoader :data="developmentData" class="py-5"></ContentLoader>
         </section>
         <section id="banner-section" class="d-flex align-items-center">
             <div class="container-fluid">
@@ -39,8 +40,7 @@
                 <li>Marketing</li>
                 <li>Office Productivity</li>
             </ul>
-            <ContentLoader :data="courses" class="py-5"></ContentLoader>
-            <ContentLoader :data="courses" class="py-5"></ContentLoader>
+            <ContentLoader :data="recentData" class="py-5"></ContentLoader>
             <button class="btn btn-danger">SHOW ALL</button>
         </section>
         <section id="subscribe-section" class="bg-danger py-5">
@@ -66,7 +66,7 @@
         <section id="popular-section" class="text-center py-5">
             <h1>Popular courses</h1>
             <h2>Dicover our most popular courses for self learning</h2>
-            <ContentLoader :data="courses" class="py-5"></ContentLoader>
+            <ContentLoader :data="popularData" class="py-5"></ContentLoader>
         </section>
         <section id="join-section" class="py-5">
             <div class="container-fluid">
@@ -111,8 +111,8 @@
 </template>
 <script>
 import ContentLoader from '../subcomponents/ContentLoader'
-import {default as APIrequest} from './../index.js'
-//import axios from 'axios'
+
+import axios from 'axios'
 
 export default {
   components: { ContentLoader },
@@ -170,34 +170,125 @@ export default {
                 }
             ],
             url : 'https://www.udemy.com/api-2.0',
-            token : 'Basic ZnQ5UVloMjlOWmxoSFJYU0FGVldUM0pJdnFTUktlQWg3ejhLZ2dNZzp1U3Y0WTdKaGEzV2tONktNSWZmWnhHbTVrb0tvYTdMbThpVm5qOWVoNlhNaG9wQlJRMUNqMXZkaUI1SlNvTFU1bk0yVURXMjZ2OFVYeFM2QmRoaDA0YjhEaXV1MG5QZ3RxY3VadFhXSXVzM29ZY0Nla2ZiYkpDSmJUMUVoZmlvWQ=='
+            token : 'Basic ZnQ5UVloMjlOWmxoSFJYU0FGVldUM0pJdnFTUktlQWg3ejhLZ2dNZzp1U3Y0WTdKaGEzV2tONktNSWZmWnhHbTVrb0tvYTdMbThpVm5qOWVoNlhNaG9wQlJRMUNqMXZkaUI1SlNvTFU1bk0yVURXMjZ2OFVYeFM2QmRoaDA0YjhEaXV1MG5QZ3RxY3VadFhXSXVzM29ZY0Nla2ZiYkpDSmJUMUVoZmlvWQ==',
+            //developmentData : require('./../data/udemy-development-data.json'),
+            //recentData : require('./../data/udemy-recent-data.json'),
+            popularData : undefined,
+            recentData : undefined,
+            developmentData : undefined
+            //popularData : require('./../data/udemy-popular-data.json')
         }
     },
-    methods : {
-
-        /*performCallAPI(category, id){
-            if(id === undefined)
-                id=''
-            if(category === undefined)
-                category=''
-            console.log(`${this.url}/${category}/${id}`)
-            axios.get(`${this.url}/${category}/${id}`, { 'headers': {
-                "Accept": "application/json, text/plain, *\/*",
-                "Authorization": "Basic ZnQ5UVloMjlOWmxoSFJYU0FGVldUM0pJdnFTUktlQWg3ejhLZ2dNZzp1U3Y0WTdKaGEzV2tONktNSWZmWnhHbTVrb0tvYTdMbThpVm5qOWVoNlhNaG9wQlJRMUNqMXZkaUI1SlNvTFU1bk0yVURXMjZ2OFVYeFM2QmRoaDA0YjhEaXV1MG5QZ3RxY3VadFhXSXVzM29ZY0Nla2ZiYkpDSmJUMUVoZmlvWQ==",
-                "Content-Type": "application/json;charset=utf-8",
-                "Access-Control-Allow-Origin": "*",
-                "Access-Control-Allow-Methods": "GET, POST, PATCH, PUT, DELETE, OPTIONS",
-                "Access-Control-Allow-Headers": "Origin, Content-Type, X-Auth-Token",
-                "useCredentails": "true",
-                "changeOrigin": "true",
-            }}).then((response) => {
-                    console.log(response.data)
-            });
-        }*/
-    },
     mounted(){
-        //this.performCallAPI('courses')
-        console.log(APIrequest); 
+        this.popularData = this.performPopularCall()
+        this.recentData = this.performRecentCall()
+        this.developmentData = this.performDevelopmentCall()
+        console.log(this.performPopularCall())
+        console.log(this.performRecentCall());
+        console.log(this.performDevelopmentCall());
+    },
+    methods : {
+        performPopularCall(){
+            axios.get(`http://localhost:3000/popular`).then((response) => {
+                console.dir(response.data.results )
+                const dataArray = [ ];
+                for (let index = 0; index < response.data.results.length; index++) {
+                    dataArray.push({
+                        title : response.data.results[index].title,
+                        src : response.data.results[index].image_480x270,
+                        category : 'Development',
+                        rated : Math.floor(Math.random()*5),
+                        price : response.data.results[index].price,
+                        discountedPrice : '50$'
+                    })
+                    console.log(dataArray[index])
+                }
+                this.popularData = dataArray
+            });
+        },
+        performRecentCall(){
+            axios.get(`http://localhost:3000/recent`).then((response) => {
+                console.dir(response.data.results )
+                const dataArray = [ ];
+                for (let index = 0; index < response.data.results.length; index++) {
+                    dataArray.push({
+                        title : response.data.results[index].title,
+                        src : response.data.results[index].image_480x270,
+                        category : 'Development',
+                        rated : Math.floor(Math.random()*5),
+                        price : response.data.results[index].price,
+                        discountedPrice : '50$'
+                    })
+                    console.log(dataArray[index])
+                }
+                this.recentData = dataArray
+            });
+        },
+        performDevelopmentCall(){
+            axios.get(`http://localhost:3000/development`).then((response) => {
+                console.dir(response.data.results )
+                const dataArray = [ ];
+                for (let index = 0; index < response.data.results.length; index++) {
+                    dataArray.push({
+                        title : response.data.results[index].title,
+                        src : response.data.results[index].image_480x270,
+                        category : 'Development',
+                        rated : Math.floor(Math.random()*5),
+                        price : response.data.results[index].price,
+                        discountedPrice : '50$'
+                    })
+                    console.log(dataArray[index])
+                }
+                this.developmentData = dataArray
+            });
+        }
+    },
+    computed : {
+        /*getDevelopmentData(){
+            const dataArray = [ ];
+            for (let index = 0; index < this.developmentData.msg.results.length; index++) {
+                dataArray.push({
+                    title : this.developmentData.msg.results[index].title,
+                    src : this.developmentData.msg.results[index].image_480x270,
+                    category : 'Development',
+                    rated : Math.floor(Math.random()*5),
+                    price : this.developmentData.msg.results[index].price,
+                    discountedPrice : '50$'
+                })
+                console.log(dataArray[index])
+            }
+            return dataArray
+        },
+        getRecentData(){
+            const dataArray = [ ];
+            for (let index = 0; index < this.recentData.msg.results.length; index++) {
+                dataArray.push({
+                    title : this.recentData.msg.results[index].title,
+                    src : this.recentData.msg.results[index].image_480x270,
+                    category : 'Development',
+                    rated : Math.floor(Math.random()*5),
+                    price : this.recentData.msg.results[index].price,
+                    discountedPrice : '50$'
+                })
+                console.log(dataArray[index])
+            }
+            return dataArray
+        },
+        getPopularData(){
+            const dataArray = [ ];
+            for (let index = 0; index < this.popularData.msg.results.length; index++) {
+                dataArray.push({
+                    title : this.popularData.msg.results[index].title,
+                    src : this.popularData.msg.results[index].image_480x270,
+                    category : 'Development',
+                    rated : Math.floor(Math.random()*5),
+                    price : this.popularData.msg.results[index].price,
+                    discountedPrice : '50$'
+                })
+                console.log(dataArray[index])
+            }
+            return dataArray
+        }*/
     }
 }
 </script>

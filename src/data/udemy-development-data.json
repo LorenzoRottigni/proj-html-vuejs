@@ -1,0 +1,1078 @@
+{
+  "msg": {
+    "count": 10000,
+    "next": "https://www.udemy.com/api-2.0/courses/?category=Development&page=2&page_size=12",
+    "previous": null,
+    "results": [
+      {
+        "_class": "course",
+        "id": 567828,
+        "title": "2022 Complete Python Bootcamp From Zero to Hero in Python",
+        "url": "/course/complete-python-bootcamp/",
+        "is_paid": true,
+        "price": "€89.99",
+        "price_detail": {
+          "amount": 89.99,
+          "currency": "EUR",
+          "price_string": "€89.99",
+          "currency_symbol": "€"
+        },
+        "price_serve_tracking_id": "TDDX9Lr0TAyYP1dPuMmo2Q",
+        "visible_instructors": [
+          {
+            "_class": "user",
+            "title": "Jose Portilla",
+            "name": "Jose",
+            "display_name": "Jose Portilla",
+            "job_title": "Head of Data Science, Pierian Data Inc.",
+            "image_50x50": "https://img-c.udemycdn.com/user/50x50/9685726_67e7_4.jpg",
+            "image_100x100": "https://img-c.udemycdn.com/user/100x100/9685726_67e7_4.jpg",
+            "initials": "JP",
+            "url": "/user/joseportilla/"
+          }
+        ],
+        "image_125_H": "https://img-c.udemycdn.com/course/125_H/567828_67d0.jpg",
+        "image_240x135": "https://img-c.udemycdn.com/course/240x135/567828_67d0.jpg",
+        "is_practice_test_course": false,
+        "image_480x270": "https://img-c.udemycdn.com/course/480x270/567828_67d0.jpg",
+        "published_title": "complete-python-bootcamp",
+        "tracking_id": "sBE70lD6SOmYWhb8b2rRYA",
+        "predictive_score": null,
+        "relevancy_score": null,
+        "input_features": null,
+        "lecture_search_result": null,
+        "curriculum_lectures": [
+          
+        ],
+        "order_in_results": null,
+        "curriculum_items": [
+          
+        ],
+        "headline": "Learn Python like a Professional  Start from the basics and go all the way to creating your own applications and games",
+        "instructor_name": null
+      },
+      {
+        "_class": "course",
+        "id": 625204,
+        "title": "The Web Developer Bootcamp 2022",
+        "url": "/course/the-web-developer-bootcamp/",
+        "is_paid": true,
+        "price": "€89.99",
+        "price_detail": {
+          "amount": 89.99,
+          "currency": "EUR",
+          "price_string": "€89.99",
+          "currency_symbol": "€"
+        },
+        "price_serve_tracking_id": "duK7P_krRxefwhyVCRZoNQ",
+        "visible_instructors": [
+          {
+            "_class": "user",
+            "title": "Colt Steele",
+            "name": "Colt",
+            "display_name": "Colt Steele",
+            "job_title": "Developer and Bootcamp Instructor",
+            "image_50x50": "https://img-c.udemycdn.com/user/50x50/4466306_6fd8_3.jpg",
+            "image_100x100": "https://img-c.udemycdn.com/user/100x100/4466306_6fd8_3.jpg",
+            "initials": "CS",
+            "url": "/user/coltsteele/"
+          }
+        ],
+        "image_125_H": "https://img-c.udemycdn.com/course/125_H/625204_436a_3.jpg",
+        "image_240x135": "https://img-c.udemycdn.com/course/240x135/625204_436a_3.jpg",
+        "is_practice_test_course": false,
+        "image_480x270": "https://img-c.udemycdn.com/course/480x270/625204_436a_3.jpg",
+        "published_title": "the-web-developer-bootcamp",
+        "tracking_id": "YfHLcN8BQmioTlN-hPuSAA",
+        "predictive_score": null,
+        "relevancy_score": null,
+        "input_features": null,
+        "lecture_search_result": null,
+        "curriculum_lectures": [
+          
+        ],
+        "order_in_results": null,
+        "curriculum_items": [
+          
+        ],
+        "headline": "COMPLETELY REDONE - The only course you need to learn web development - HTML, CSS, JS, Node, and More!",
+        "instructor_name": null
+      },
+      {
+        "_class": "course",
+        "id": 1565838,
+        "title": "The Complete 2022 Web Development Bootcamp",
+        "url": "/course/the-complete-web-development-bootcamp/",
+        "is_paid": true,
+        "price": "€89.99",
+        "price_detail": {
+          "amount": 89.99,
+          "currency": "EUR",
+          "price_string": "€89.99",
+          "currency_symbol": "€"
+        },
+        "price_serve_tracking_id": "3EvmemYSTyyQyMVCiRr1fw",
+        "visible_instructors": [
+          {
+            "_class": "user",
+            "title": "Dr. Angela Yu",
+            "name": "Dr. Angela",
+            "display_name": "Dr. Angela Yu",
+            "job_title": "Developer and Lead Instructor",
+            "image_50x50": "https://img-c.udemycdn.com/user/50x50/31334738_a13c_2.jpg",
+            "image_100x100": "https://img-b.udemycdn.com/user/100x100/31334738_a13c_2.jpg?secure=iR4ONe_2BRcjI2a_sgtT-w%3D%3D%2C1637769522",
+            "initials": "DY",
+            "url": "/user/4b4368a3-b5c8-4529-aa65-2056ec31f37e/"
+          }
+        ],
+        "image_125_H": "https://img-c.udemycdn.com/course/125_H/1565838_e54e_14.jpg",
+        "image_240x135": "https://img-c.udemycdn.com/course/240x135/1565838_e54e_14.jpg",
+        "is_practice_test_course": false,
+        "image_480x270": "https://img-c.udemycdn.com/course/480x270/1565838_e54e_14.jpg",
+        "published_title": "the-complete-web-development-bootcamp",
+        "tracking_id": "TgYny9tdSOqxtLA94I3oxg",
+        "predictive_score": null,
+        "relevancy_score": null,
+        "input_features": null,
+        "lecture_search_result": null,
+        "curriculum_lectures": [
+          
+        ],
+        "order_in_results": null,
+        "curriculum_items": [
+          
+        ],
+        "headline": "Become a Full-Stack Web Developer with just ONE course. HTML, CSS, Javascript, Node, React, MongoDB, build real projects",
+        "instructor_name": null
+      },
+      {
+        "_class": "course",
+        "id": 756150,
+        "title": "Angular - The Complete Guide (2022 Edition)",
+        "url": "/course/the-complete-guide-to-angular-2/",
+        "is_paid": true,
+        "price": "€119.99",
+        "price_detail": {
+          "amount": 119.99,
+          "currency": "EUR",
+          "price_string": "€119.99",
+          "currency_symbol": "€"
+        },
+        "price_serve_tracking_id": "oUBpyH3KTOi7YLr7T8L64w",
+        "visible_instructors": [
+          {
+            "_class": "user",
+            "title": "Maximilian Schwarzmüller",
+            "name": "Maximilian",
+            "display_name": "Maximilian Schwarzmüller",
+            "job_title": "Professional Web Developer and Instructor",
+            "image_50x50": "https://img-c.udemycdn.com/user/50x50/13952972_e853.jpg",
+            "image_100x100": "https://img-b.udemycdn.com/user/100x100/13952972_e853.jpg?secure=ASU49o4Sb9-qojqoqsiPKA%3D%3D%2C1637769522",
+            "initials": "MS",
+            "url": "/user/maximilian-schwarzmuller/"
+          }
+        ],
+        "image_125_H": "https://img-c.udemycdn.com/course/125_H/756150_c033_2.jpg",
+        "image_240x135": "https://img-c.udemycdn.com/course/240x135/756150_c033_2.jpg",
+        "is_practice_test_course": false,
+        "image_480x270": "https://img-b.udemycdn.com/course/480x270/756150_c033_2.jpg?secure=G74AVsnLWS-AROuuE072iQ%3D%3D%2C1637769522",
+        "published_title": "the-complete-guide-to-angular-2",
+        "tracking_id": "qZcE4N21QbmVycuvQQ0pZA",
+        "predictive_score": null,
+        "relevancy_score": null,
+        "input_features": null,
+        "lecture_search_result": null,
+        "curriculum_lectures": [
+          
+        ],
+        "order_in_results": null,
+        "curriculum_items": [
+          
+        ],
+        "headline": "Master Angular 13 (formerly \"Angular 2\") and build awesome, reactive web apps with the successor of Angular.js",
+        "instructor_name": null
+      },
+      {
+        "_class": "course",
+        "id": 950390,
+        "title": "Machine Learning A-Z™: Hands-On Python & R In Data Science",
+        "url": "/course/machinelearning/",
+        "is_paid": true,
+        "price": "€89.99",
+        "price_detail": {
+          "amount": 89.99,
+          "currency": "EUR",
+          "price_string": "€89.99",
+          "currency_symbol": "€"
+        },
+        "price_serve_tracking_id": "W71R9YVZQyq4O6EU43nYnQ",
+        "visible_instructors": [
+          {
+            "_class": "user",
+            "title": "Kirill Eremenko",
+            "name": "Kirill",
+            "display_name": "Kirill Eremenko",
+            "job_title": "Data Scientist",
+            "image_50x50": "https://img-c.udemycdn.com/user/50x50/2364054_83cd_5.jpg",
+            "image_100x100": "https://img-c.udemycdn.com/user/100x100/2364054_83cd_5.jpg",
+            "initials": "KE",
+            "url": "/user/kirilleremenko/"
+          },
+          {
+            "_class": "user",
+            "title": "Hadelin de Ponteves",
+            "name": "Hadelin",
+            "display_name": "Hadelin de Ponteves",
+            "job_title": "AI Entrepreneur",
+            "image_50x50": "https://img-b.udemycdn.com/user/50x50/22113450_6fb5_3.jpg?secure=JUvt4bRLIU09gqCFnfNCLw%3D%3D%2C1637769522",
+            "image_100x100": "https://img-c.udemycdn.com/user/100x100/22113450_6fb5_3.jpg",
+            "initials": "HD",
+            "url": "/user/hadelin-de-ponteves/"
+          },
+          {
+            "_class": "user",
+            "title": "Ligency I Team",
+            "name": "Ligency I",
+            "display_name": "Ligency I Team",
+            "job_title": "Helping Data Scientists Succeed",
+            "image_50x50": "https://img-c.udemycdn.com/user/50x50/27129696_acc1_2.jpg",
+            "image_100x100": "https://img-c.udemycdn.com/user/100x100/27129696_acc1_2.jpg",
+            "initials": "LT",
+            "url": "/user/superdatascience-team/"
+          },
+          {
+            "_class": "user",
+            "title": "SuperDataScience Support",
+            "name": "SuperDataScience",
+            "display_name": "SuperDataScience Support",
+            "job_title": "Answering All Your Questions",
+            "image_50x50": "https://img-c.udemycdn.com/user/50x50/49643366_0fa3.jpg",
+            "image_100x100": "https://img-c.udemycdn.com/user/100x100/49643366_0fa3.jpg",
+            "initials": "SS",
+            "url": "/user/superdatascience-support/"
+          }
+        ],
+        "image_125_H": "https://img-c.udemycdn.com/course/125_H/950390_270f_3.jpg",
+        "image_240x135": "https://img-c.udemycdn.com/course/240x135/950390_270f_3.jpg",
+        "is_practice_test_course": false,
+        "image_480x270": "https://img-b.udemycdn.com/course/480x270/950390_270f_3.jpg?secure=nWKvorma_hWKn6eTBJZB7Q%3D%3D%2C1637769522",
+        "published_title": "machinelearning",
+        "tracking_id": "gc5jJlCnTzmWBBOo_ZQ07w",
+        "predictive_score": null,
+        "relevancy_score": null,
+        "input_features": null,
+        "lecture_search_result": null,
+        "curriculum_lectures": [
+          
+        ],
+        "order_in_results": null,
+        "curriculum_items": [
+          
+        ],
+        "headline": "Learn to create Machine Learning Algorithms in Python and R from two Data Science experts. Code templates included.",
+        "instructor_name": null
+      },
+      {
+        "_class": "course",
+        "id": 533682,
+        "title": "Java Programming Masterclass covering Java 11 & Java 17",
+        "url": "/course/java-the-complete-java-developer-course/",
+        "is_paid": true,
+        "price": "€119.99",
+        "price_detail": {
+          "amount": 119.99,
+          "currency": "EUR",
+          "price_string": "€119.99",
+          "currency_symbol": "€"
+        },
+        "price_serve_tracking_id": "apFBFKDuTYO5P-FJFkYa8g",
+        "visible_instructors": [
+          {
+            "_class": "user",
+            "title": "Tim Buchalka",
+            "name": "Tim",
+            "display_name": "Tim Buchalka",
+            "job_title": "Java Python Android and C# Expert Developer - 1M+ students",
+            "image_50x50": "https://img-b.udemycdn.com/user/50x50/599932_71aa_5.jpg?secure=Xyir1I-Ir69LLyQbrTcUVQ%3D%3D%2C1637769522",
+            "image_100x100": "https://img-b.udemycdn.com/user/100x100/599932_71aa_5.jpg?secure=mu421DPawtvA2_hXqDeOrA%3D%3D%2C1637769522",
+            "initials": "TB",
+            "url": "/user/timbuchalka/"
+          },
+          {
+            "_class": "user",
+            "title": "Tim Buchalka's Learn Programming Academy",
+            "name": "Tim Buchalka's Learn",
+            "display_name": "Tim Buchalka's Learn Programming Academy",
+            "job_title": "Professional Programmers and Teachers - 1.24M students",
+            "image_50x50": "https://img-c.udemycdn.com/user/50x50/35101150_6f0c_4.jpg",
+            "image_100x100": "https://img-c.udemycdn.com/user/100x100/35101150_6f0c_4.jpg",
+            "initials": "TP",
+            "url": "/user/learn-programming-academy/"
+          }
+        ],
+        "image_125_H": "https://img-c.udemycdn.com/course/125_H/533682_c10c_4.jpg",
+        "image_240x135": "https://img-c.udemycdn.com/course/240x135/533682_c10c_4.jpg",
+        "is_practice_test_course": false,
+        "image_480x270": "https://img-c.udemycdn.com/course/480x270/533682_c10c_4.jpg",
+        "published_title": "java-the-complete-java-developer-course",
+        "tracking_id": "Q_cP473ZQ56rK8-9xs7htA",
+        "predictive_score": null,
+        "relevancy_score": null,
+        "input_features": null,
+        "lecture_search_result": null,
+        "curriculum_lectures": [
+          
+        ],
+        "order_in_results": null,
+        "curriculum_items": [
+          
+        ],
+        "headline": "Learn Java In This Course And Become a Computer Programmer. Obtain valuable Core Java Skills And Java Certification",
+        "instructor_name": null
+      },
+      {
+        "_class": "course",
+        "id": 1362070,
+        "title": "React - The Complete Guide (incl Hooks, React Router, Redux)",
+        "url": "/course/react-the-complete-guide-incl-redux/",
+        "is_paid": true,
+        "price": "€89.99",
+        "price_detail": {
+          "amount": 89.99,
+          "currency": "EUR",
+          "price_string": "€89.99",
+          "currency_symbol": "€"
+        },
+        "price_serve_tracking_id": "ObTdcenVSAGHQOGYPS-Obg",
+        "visible_instructors": [
+          {
+            "_class": "user",
+            "title": "Academind by Maximilian Schwarzmüller",
+            "name": "Academind by Maximilian",
+            "display_name": "Academind by Maximilian Schwarzmüller",
+            "job_title": "Online Education",
+            "image_50x50": "https://img-c.udemycdn.com/user/50x50/31926668_94e7_6.jpg",
+            "image_100x100": "https://img-c.udemycdn.com/user/100x100/31926668_94e7_6.jpg",
+            "initials": "AS",
+            "url": "/user/academind/"
+          },
+          {
+            "_class": "user",
+            "title": "Maximilian Schwarzmüller",
+            "name": "Maximilian",
+            "display_name": "Maximilian Schwarzmüller",
+            "job_title": "Professional Web Developer and Instructor",
+            "image_50x50": "https://img-c.udemycdn.com/user/50x50/13952972_e853.jpg",
+            "image_100x100": "https://img-c.udemycdn.com/user/100x100/13952972_e853.jpg",
+            "initials": "MS",
+            "url": "/user/maximilian-schwarzmuller/"
+          }
+        ],
+        "image_125_H": "https://img-b.udemycdn.com/course/125_H/1362070_b9a1_2.jpg?secure=pjBiORIH8ASjMpiP0Nx45w%3D%3D%2C1637769522",
+        "image_240x135": "https://img-c.udemycdn.com/course/240x135/1362070_b9a1_2.jpg",
+        "is_practice_test_course": false,
+        "image_480x270": "https://img-c.udemycdn.com/course/480x270/1362070_b9a1_2.jpg",
+        "published_title": "react-the-complete-guide-incl-redux",
+        "tracking_id": "oMysCx2HQ2K9KrbkdXsI_Q",
+        "predictive_score": null,
+        "relevancy_score": null,
+        "input_features": null,
+        "lecture_search_result": null,
+        "curriculum_lectures": [
+          
+        ],
+        "order_in_results": null,
+        "curriculum_items": [
+          
+        ],
+        "headline": "Dive in and learn React.js from scratch! Learn Reactjs, Hooks, Redux, React Routing, Animations, Next.js and way more!",
+        "instructor_name": null
+      },
+      {
+        "_class": "course",
+        "id": 851712,
+        "title": "The Complete JavaScript Course 2022: From Zero to Expert!",
+        "url": "/course/the-complete-javascript-course/",
+        "is_paid": true,
+        "price": "€89.99",
+        "price_detail": {
+          "amount": 89.99,
+          "currency": "EUR",
+          "price_string": "€89.99",
+          "currency_symbol": "€"
+        },
+        "price_serve_tracking_id": "Ijq4iviPR2-fRtt46mZaFw",
+        "visible_instructors": [
+          {
+            "_class": "user",
+            "title": "Jonas Schmedtmann",
+            "name": "Jonas",
+            "display_name": "Jonas Schmedtmann",
+            "job_title": "Web Developer, Designer, and Teacher",
+            "image_50x50": "https://img-c.udemycdn.com/user/50x50/7799204_2091_5.jpg",
+            "image_100x100": "https://img-b.udemycdn.com/user/100x100/7799204_2091_5.jpg?secure=7zoK-xO3yJ05Yk72l_G3Qw%3D%3D%2C1637769522",
+            "initials": "JS",
+            "url": "/user/jonasschmedtmann/"
+          }
+        ],
+        "image_125_H": "https://img-c.udemycdn.com/course/125_H/851712_fc61_6.jpg",
+        "image_240x135": "https://img-b.udemycdn.com/course/240x135/851712_fc61_6.jpg?secure=L8zX94uulR1sJedSbagAew%3D%3D%2C1637769522",
+        "is_practice_test_course": false,
+        "image_480x270": "https://img-c.udemycdn.com/course/480x270/851712_fc61_6.jpg",
+        "published_title": "the-complete-javascript-course",
+        "tracking_id": "hvyVmesNT6qTHP0WdqIWxQ",
+        "predictive_score": null,
+        "relevancy_score": null,
+        "input_features": null,
+        "lecture_search_result": null,
+        "curriculum_lectures": [
+          
+        ],
+        "order_in_results": null,
+        "curriculum_items": [
+          
+        ],
+        "headline": "The modern JavaScript course for everyone! Master JavaScript with projects, challenges and theory. Many courses in one!",
+        "instructor_name": null
+      },
+      {
+        "_class": "course",
+        "id": 903744,
+        "title": "Python for Data Science and Machine Learning Bootcamp",
+        "url": "/course/python-for-data-science-and-machine-learning-bootcamp/",
+        "is_paid": true,
+        "price": "€89.99",
+        "price_detail": {
+          "amount": 89.99,
+          "currency": "EUR",
+          "price_string": "€89.99",
+          "currency_symbol": "€"
+        },
+        "price_serve_tracking_id": "Jfpoxp__Qn-5G-3Qa6r4Ig",
+        "visible_instructors": [
+          {
+            "_class": "user",
+            "title": "Jose Portilla",
+            "name": "Jose",
+            "display_name": "Jose Portilla",
+            "job_title": "Head of Data Science, Pierian Data Inc.",
+            "image_50x50": "https://img-c.udemycdn.com/user/50x50/9685726_67e7_4.jpg",
+            "image_100x100": "https://img-c.udemycdn.com/user/100x100/9685726_67e7_4.jpg",
+            "initials": "JP",
+            "url": "/user/joseportilla/"
+          }
+        ],
+        "image_125_H": "https://img-b.udemycdn.com/course/125_H/903744_8eb2.jpg?secure=_RX6PsKG1QQgpDLqDMjUZg%3D%3D%2C1637773903",
+        "image_240x135": "https://img-c.udemycdn.com/course/240x135/903744_8eb2.jpg",
+        "is_practice_test_course": false,
+        "image_480x270": "https://img-c.udemycdn.com/course/480x270/903744_8eb2.jpg",
+        "published_title": "python-for-data-science-and-machine-learning-bootcamp",
+        "tracking_id": "o0GcvryqQWygXHVkN9tdYg",
+        "predictive_score": null,
+        "relevancy_score": null,
+        "input_features": null,
+        "lecture_search_result": null,
+        "curriculum_lectures": [
+          
+        ],
+        "order_in_results": null,
+        "curriculum_items": [
+          
+        ],
+        "headline": "Learn how to use NumPy, Pandas, Seaborn , Matplotlib , Plotly , Scikit-Learn , Machine Learning, Tensorflow , and more!",
+        "instructor_name": null
+      },
+      {
+        "_class": "course",
+        "id": 1754098,
+        "title": "The Data Science Course 2021: Complete Data Science Bootcamp",
+        "url": "/course/the-data-science-course-complete-data-science-bootcamp/",
+        "is_paid": true,
+        "price": "€89.99",
+        "price_detail": {
+          "amount": 89.99,
+          "currency": "EUR",
+          "price_string": "€89.99",
+          "currency_symbol": "€"
+        },
+        "price_serve_tracking_id": "xd_MZTyiS72JN2ZYXS9pOQ",
+        "visible_instructors": [
+          {
+            "_class": "user",
+            "title": "365 Careers",
+            "name": "365",
+            "display_name": "365 Careers",
+            "job_title": "Creating opportunities for Business & Finance students",
+            "image_50x50": "https://img-c.udemycdn.com/user/50x50/8280056_7887_3.jpg",
+            "image_100x100": "https://img-b.udemycdn.com/user/100x100/8280056_7887_3.jpg?secure=iRu2b0ul73WbNHCbMv7VZA%3D%3D%2C1637773903",
+            "initials": "3C",
+            "url": "/user/365careers/"
+          },
+          {
+            "_class": "user",
+            "title": "365 Careers Team",
+            "name": "365 Careers",
+            "display_name": "365 Careers Team",
+            "job_title": "Creating opportunities for Business & Finance students",
+            "image_50x50": "https://img-c.udemycdn.com/user/50x50/48349002_9974_2.jpg",
+            "image_100x100": "https://img-c.udemycdn.com/user/100x100/48349002_9974_2.jpg",
+            "initials": "3T",
+            "url": "/user/365-careers-team/"
+          }
+        ],
+        "image_125_H": "https://img-c.udemycdn.com/course/125_H/1754098_e0df_3.jpg",
+        "image_240x135": "https://img-c.udemycdn.com/course/240x135/1754098_e0df_3.jpg",
+        "is_practice_test_course": false,
+        "image_480x270": "https://img-b.udemycdn.com/course/480x270/1754098_e0df_3.jpg?secure=odz-P7EGX997g10ydTUhIA%3D%3D%2C1637773903",
+        "published_title": "the-data-science-course-complete-data-science-bootcamp",
+        "tracking_id": "P574QcPQSFiVBK2lYJlslg",
+        "predictive_score": null,
+        "relevancy_score": null,
+        "input_features": null,
+        "lecture_search_result": null,
+        "curriculum_lectures": [
+          
+        ],
+        "order_in_results": null,
+        "curriculum_items": [
+          
+        ],
+        "headline": "Complete Data Science Training: Mathematics, Statistics, Python, Advanced Statistics in Python, Machine & Deep Learning",
+        "instructor_name": null
+      },
+      {
+        "_class": "course",
+        "id": 543600,
+        "title": "Automate the Boring Stuff with Python Programming",
+        "url": "/course/automate/",
+        "is_paid": true,
+        "price": "€49.99",
+        "price_detail": {
+          "amount": 49.99,
+          "currency": "EUR",
+          "price_string": "€49.99",
+          "currency_symbol": "€"
+        },
+        "price_serve_tracking_id": "3DJ1BezBT5qjsdn8YD6jaA",
+        "visible_instructors": [
+          {
+            "_class": "user",
+            "title": "Al Sweigart",
+            "name": "Al",
+            "display_name": "Al Sweigart",
+            "job_title": "Software developer, tech book author",
+            "image_50x50": "https://img-c.udemycdn.com/user/50x50/13922584_4ff5_2.jpg",
+            "image_100x100": "https://img-c.udemycdn.com/user/100x100/13922584_4ff5_2.jpg",
+            "initials": "AS",
+            "url": "/user/al-sweigart/"
+          }
+        ],
+        "image_125_H": "https://img-c.udemycdn.com/course/125_H/543600_64d1_4.jpg",
+        "image_240x135": "https://img-c.udemycdn.com/course/240x135/543600_64d1_4.jpg",
+        "is_practice_test_course": false,
+        "image_480x270": "https://img-c.udemycdn.com/course/480x270/543600_64d1_4.jpg",
+        "published_title": "automate",
+        "tracking_id": "cVqhCHzLT56hUBW3Gswefg",
+        "predictive_score": null,
+        "relevancy_score": null,
+        "input_features": null,
+        "lecture_search_result": null,
+        "curriculum_lectures": [
+          
+        ],
+        "order_in_results": null,
+        "curriculum_items": [
+          
+        ],
+        "headline": "A practical programming course for office workers, academics, and administrators who want to improve their productivity.",
+        "instructor_name": null
+      },
+      {
+        "_class": "course",
+        "id": 258316,
+        "title": "Complete C# Unity Game Developer 2D",
+        "url": "/course/unitycourse/",
+        "is_paid": true,
+        "price": "€89.99",
+        "price_detail": {
+          "amount": 89.99,
+          "currency": "EUR",
+          "price_string": "€89.99",
+          "currency_symbol": "€"
+        },
+        "price_serve_tracking_id": "bR1nBYFAQN-idudOJxxETQ",
+        "visible_instructors": [
+          {
+            "_class": "user",
+            "title": "GameDev.tv Team",
+            "name": "GameDev.tv",
+            "display_name": "GameDev.tv Team",
+            "job_title": "Learn to Make and Sell Games",
+            "image_50x50": "https://img-b.udemycdn.com/user/50x50/33027212_4271_5.jpg?secure=2tv44bFt9ddaMbx1oSUkdw%3D%3D%2C1637773903",
+            "image_100x100": "https://img-c.udemycdn.com/user/100x100/33027212_4271_5.jpg",
+            "initials": "GT",
+            "url": "/user/gamedevtv/"
+          },
+          {
+            "_class": "user",
+            "title": "Rick Davidson",
+            "name": "Rick",
+            "display_name": "Rick Davidson",
+            "job_title": "Career Coach with 14+ years in the Video Game Industry",
+            "image_50x50": "https://img-c.udemycdn.com/user/50x50/24317920_c8a2_2.jpg",
+            "image_100x100": "https://img-c.udemycdn.com/user/100x100/24317920_c8a2_2.jpg",
+            "initials": "RD",
+            "url": "/user/rick-davidson-5/"
+          },
+          {
+            "_class": "user",
+            "title": "Gary Pettie",
+            "name": "Gary",
+            "display_name": "Gary Pettie",
+            "job_title": "Indie Game Developer :: GameDev.tv Tutor",
+            "image_50x50": "https://img-c.udemycdn.com/user/50x50/27472388_3ae9_2.jpg",
+            "image_100x100": "https://img-b.udemycdn.com/user/100x100/27472388_3ae9_2.jpg?secure=f8Vg7bFK2pHafENafHJLZg%3D%3D%2C1637773903",
+            "initials": "GP",
+            "url": "/user/gary-pettie/"
+          }
+        ],
+        "image_125_H": "https://img-b.udemycdn.com/course/125_H/258316_55e9_11.jpg?secure=5xfywy3uoLG-t71W7ZRf6A%3D%3D%2C1637773903",
+        "image_240x135": "https://img-c.udemycdn.com/course/240x135/258316_55e9_11.jpg",
+        "is_practice_test_course": false,
+        "image_480x270": "https://img-b.udemycdn.com/course/480x270/258316_55e9_11.jpg?secure=K8RdluiK_RfBsyL3SpEPSQ%3D%3D%2C1637773903",
+        "published_title": "unitycourse",
+        "tracking_id": "Hmw7Mnc1RKisbD7mDTsWlQ",
+        "predictive_score": null,
+        "relevancy_score": null,
+        "input_features": null,
+        "lecture_search_result": null,
+        "curriculum_lectures": [
+          
+        ],
+        "order_in_results": null,
+        "curriculum_items": [
+          
+        ],
+        "headline": "Learn Unity in C# & Code Your First Five 2D Video Games for Web, Mac & PC. The Tutorials Cover Tilemap",
+        "instructor_name": null
+      }
+    ],
+    "aggregations": [
+      {
+        "id": "price",
+        "title": "Price",
+        "options": [
+          {
+            "key": "price",
+            "title": "Paid",
+            "count": 10000,
+            "value": "price-paid"
+          },
+          {
+            "key": "price",
+            "title": "Free",
+            "count": 2964,
+            "value": "price-free"
+          }
+        ]
+      },
+      {
+        "id": "instructional_level",
+        "title": "Level",
+        "options": [
+          {
+            "key": "instructional_level",
+            "title": "All Levels",
+            "count": 10000,
+            "value": "all"
+          },
+          {
+            "key": "instructional_level",
+            "title": "Beginner",
+            "count": 10000,
+            "value": "beginner"
+          },
+          {
+            "key": "instructional_level",
+            "title": "Intermediate",
+            "count": 4299,
+            "value": "intermediate"
+          },
+          {
+            "key": "instructional_level",
+            "title": "Expert",
+            "count": 531,
+            "value": "expert"
+          }
+        ]
+      },
+      {
+        "id": "features",
+        "title": "Features",
+        "options": [
+          {
+            "key": "has_closed_caption",
+            "title": "Captions",
+            "count": 10000,
+            "value": "true"
+          },
+          {
+            "key": "has_simple_quiz",
+            "title": "Quizzes",
+            "count": 5553,
+            "value": "true"
+          },
+          {
+            "key": "has_coding_exercises",
+            "title": "Coding Exercises",
+            "count": 615,
+            "value": "true"
+          }
+        ]
+      },
+      {
+        "id": "language",
+        "title": "Language",
+        "options": [
+          {
+            "key": "language",
+            "title": "English",
+            "count": 10000,
+            "value": "en"
+          },
+          {
+            "key": "language",
+            "title": "Português",
+            "count": 2387,
+            "value": "pt"
+          },
+          {
+            "key": "language",
+            "title": "Español",
+            "count": 2106,
+            "value": "es"
+          },
+          {
+            "key": "language",
+            "title": "Türkçe",
+            "count": 1452,
+            "value": "tr"
+          },
+          {
+            "key": "language",
+            "title": "Français",
+            "count": 818,
+            "value": "fr"
+          },
+          {
+            "key": "language",
+            "title": "日本語",
+            "count": 690,
+            "value": "ja"
+          },
+          {
+            "key": "language",
+            "title": "中文",
+            "count": 583,
+            "value": "zh"
+          },
+          {
+            "key": "language",
+            "title": "العربية",
+            "count": 524,
+            "value": "ar"
+          },
+          {
+            "key": "language",
+            "title": "Deutsch",
+            "count": 524,
+            "value": "de"
+          },
+          {
+            "key": "language",
+            "title": "Русский",
+            "count": 441,
+            "value": "ru"
+          },
+          {
+            "key": "language",
+            "title": "Polski",
+            "count": 339,
+            "value": "pl"
+          },
+          {
+            "key": "language",
+            "title": "Italiano",
+            "count": 255,
+            "value": "it"
+          },
+          {
+            "key": "language",
+            "title": "Bahasa Indonesia",
+            "count": 238,
+            "value": "id"
+          },
+          {
+            "key": "language",
+            "title": "한국어",
+            "count": 203,
+            "value": "ko"
+          },
+          {
+            "key": "language",
+            "title": "हिन्दी",
+            "count": 129,
+            "value": "hi"
+          },
+          {
+            "key": "language",
+            "title": "ภาษาไทย",
+            "count": 89,
+            "value": "th"
+          },
+          {
+            "key": "language",
+            "title": "اردو",
+            "count": 71,
+            "value": "ur"
+          },
+          {
+            "key": "language",
+            "title": "Tiếng Việt",
+            "count": 37,
+            "value": "vi"
+          },
+          {
+            "key": "language",
+            "title": "தமிழ்",
+            "count": 33,
+            "value": "ta"
+          },
+          {
+            "key": "language",
+            "title": "Română",
+            "count": 23,
+            "value": "ro"
+          },
+          {
+            "key": "language",
+            "title": "Telugu",
+            "count": 20,
+            "value": "te"
+          },
+          {
+            "key": "language",
+            "title": "Bangla",
+            "count": 19,
+            "value": "bn"
+          },
+          {
+            "key": "language",
+            "title": "Nederlands",
+            "count": 12,
+            "value": "nl"
+          },
+          {
+            "key": "language",
+            "title": "Azərbaycan dili",
+            "count": 10,
+            "value": "az"
+          },
+          {
+            "key": "language",
+            "title": "فارسی",
+            "count": 10,
+            "value": "fa"
+          },
+          {
+            "key": "language",
+            "title": "‏עברית‏",
+            "count": 9,
+            "value": "he"
+          },
+          {
+            "key": "language",
+            "title": "Malayāḷam",
+            "count": 8,
+            "value": "ml"
+          },
+          {
+            "key": "language",
+            "title": "Ελληνικά",
+            "count": 6,
+            "value": "el"
+          },
+          {
+            "key": "language",
+            "title": "ગુજરાતી",
+            "count": 4,
+            "value": "gu"
+          },
+          {
+            "key": "language",
+            "title": "မြန်မာဘာသာ",
+            "count": 4,
+            "value": "my"
+          },
+          {
+            "key": "language",
+            "title": "मराठी",
+            "count": 3,
+            "value": "mr"
+          },
+          {
+            "key": "language",
+            "title": "नेपाली",
+            "count": 3,
+            "value": "ne"
+          },
+          {
+            "key": "language",
+            "title": "پښتو",
+            "count": 3,
+            "value": "ps"
+          },
+          {
+            "key": "language",
+            "title": "Català",
+            "count": 2,
+            "value": "ca"
+          },
+          {
+            "key": "language",
+            "title": "Українська",
+            "count": 2,
+            "value": "uk"
+          },
+          {
+            "key": "language",
+            "title": "O'zbek",
+            "count": 2,
+            "value": "uz"
+          },
+          {
+            "key": "language",
+            "title": "Čeština",
+            "count": 1,
+            "value": "cs"
+          },
+          {
+            "key": "language",
+            "title": "Suomi",
+            "count": 1,
+            "value": "fi"
+          },
+          {
+            "key": "language",
+            "title": "Hrvatski",
+            "count": 1,
+            "value": "hr"
+          },
+          {
+            "key": "language",
+            "title": "Magyar",
+            "count": 1,
+            "value": "hu"
+          },
+          {
+            "key": "language",
+            "title": "ქართული",
+            "count": 1,
+            "value": "ka"
+          },
+          {
+            "key": "language",
+            "title": "Soomaaliga",
+            "count": 1,
+            "value": "so"
+          },
+          {
+            "key": "language",
+            "title": "Српски",
+            "count": 1,
+            "value": "sr"
+          },
+          {
+            "key": "language",
+            "title": "Svenska",
+            "count": 1,
+            "value": "sv"
+          },
+          {
+            "key": "language",
+            "title": "Kiswahili",
+            "count": 1,
+            "value": "sw"
+          }
+        ]
+      },
+      {
+        "id": "ratings",
+        "title": "Ratings",
+        "options": [
+          {
+            "key": "ratings",
+            "title": "4.5 & up",
+            "count": 9511,
+            "value": "4.5"
+          },
+          {
+            "key": "ratings",
+            "title": "4.0 & up",
+            "count": 10000,
+            "value": "4.0"
+          },
+          {
+            "key": "ratings",
+            "title": "3.5 & up",
+            "count": 10000,
+            "value": "3.5"
+          },
+          {
+            "key": "ratings",
+            "title": "3.0 & up",
+            "count": 10000,
+            "value": "3.0"
+          }
+        ]
+      },
+      {
+        "id": "duration",
+        "title": "Duration",
+        "options": [
+          {
+            "key": "duration",
+            "title": "0-1 Hour",
+            "count": 2118,
+            "value": "extraShort"
+          },
+          {
+            "key": "duration",
+            "title": "1-3 Hours",
+            "count": 7964,
+            "value": "short"
+          },
+          {
+            "key": "duration",
+            "title": "3-6 Hours",
+            "count": 6692,
+            "value": "medium"
+          },
+          {
+            "key": "duration",
+            "title": "6-17 Hours",
+            "count": 7339,
+            "value": "long"
+          },
+          {
+            "key": "duration",
+            "title": "17+ Hours",
+            "count": 3110,
+            "value": "extraLong"
+          }
+        ]
+      }
+    ],
+    "search_tracking_id": "tF3MeNuVTm6OU08tbj_6zA"
+  }
+}
