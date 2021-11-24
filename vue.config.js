@@ -4,5 +4,8 @@ module.exports = {
       shouldServeApp: true,
       serverDir: './src/'
     }
+  },
+  devServer: {
+    proxy: 'http://localhost:4000'
   }
 }

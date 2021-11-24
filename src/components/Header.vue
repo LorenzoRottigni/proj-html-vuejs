@@ -32,8 +32,8 @@
         </nav>
         <section id="search-section d-flex justify-content-around">
             <div class="search-container container-fluid py-4">
-                <div class="row d-flex align-items-center gap-3 gap-lg-0">
-                    <div class="d-flex col-12 col-lg-7 gap-3">
+                <div class="row d-flex align-items-center gap-2 gap-xl-0">
+                    <div class="d-flex col-12 col-xl-7 gap-2">
                         <img src="./../assets/MasterStudy.svg" alt="master study">
                         <div class="btn-group">
                             <button class="btn btn-sm dropdown-toggle text-dark-grey" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -51,14 +51,14 @@
                             <span class="input-group-text btn-aegean rounded-0" id="inputGroup-sizing-default"><i class="fa fa-search text-white"></i></span>
                         </div>
                     </div>
-                    <div class="d-flex align-items-center justify-content-between col-12 col-lg-5">
+                    <div class="d-flex align-items-center justify-content-between col-12 col-xl-5">
                         <div class="list-container d-flex align-items-center">
                             <ul class="list-unstyled d-flex text-dark-grey my-0  align-items-center">
-                                <li class="d-flex align-items-center"><i class="fa fa-bullhorn fs-3 mx-2 ml-0"></i> Become an instructor</li>
-                                <li class="d-flex align-items-center"><i class="fa fa-suitcase fs-3 mx-2 ml-0"></i>For Enterprise</li>
+                                <li class="d-flex align-items-center"><i class="fa fa-bullhorn fs-3 mx-2 ml-0"></i><a href="#">Become an instructor</a></li>
+                                <li class="d-flex align-items-center"><i class="fa fa-suitcase fs-3 mx-2 ml-0"></i><a href="#">For Enterprise</a></li>
                             </ul>
                         </div>
-                        <div class="d-flex align-items-center gap-3">
+                        <div class="d-flex align-items-center gap-2">
                             <button class="btn btn-white d-flex align-items-center"> <i class="fa fa-user mx-2 fs-3"></i> Log in</button>
                             <button class="btn btn-danger">SIGN UP</button>
                             <i class="fa fa-bookmark text-aegean fs-3"></i>
@@ -69,12 +69,22 @@
         </section>
         <section id="dark-nav-section" class="bg-dark-blue py-5 mb-5">
             <nav>
-                <ul class="list-unstyled d-flex justify-content-center text-white gap-3 mb-0">
-                    <li class="d-flex align-items-center gap-3"><i class="fs-3 fa fa-money"></i> Business</li>
-                    <li class="d-flex align-items-center gap-3"><i class="fs-3 fa fa-paint-brush"></i> Design</li>
-                    <li class="d-flex align-items-center gap-3"><i class="fs-3 fa fa-cog"></i> Development</li>
-                    <li class="d-flex align-items-center gap-3"><i class="fs-3 fa fa-smile-o"></i> Life Style</li>
-                    <li class="d-flex align-items-center gap-3"><i class="fs-3 fa fa-space-shuttle"></i> Office Productivity</li>
+                <ul class="list-unstyled d-flex justify-content-center flex-wrap align-items-center text-white gap-3 mb-0">
+                    <li>
+                        <a href="#recent-section" class="text-white d-flex align-items-center gap-3"><i class="fs-3 fa fa-money"></i> Business</a>
+                    </li>
+                    <li>
+                        <a href="#recent-section" class="text-white d-flex align-items-center gap-3"><i class="fs-3 fa fa-paint-brush"></i> Design</a>
+                    </li>
+                    <li>
+                        <a href="#recent-section" class="text-white d-flex align-items-center gap-3"><i class="fs-3 fa fa-cog"></i> Development</a>
+                    </li>
+                    <li>
+                        <a href="#recent-section" class="text-white d-flex align-items-center gap-3"><i class="fs-3 fa fa-smile-o"></i> Life Style</a>
+                    </li>
+                    <li>
+                        <a href="#recent-section" class="text-white d-flex align-items-center gap-3"><i class="fs-3 fa fa-space-shuttle"></i> Office Productivity</a>
+                    </li>
                 </ul>
             </nav>
         </section>
@@ -141,6 +151,14 @@ export default {
         margin-left: 15%;
     }
 }
+a{
+    white-space: nowrap;
+    color: $dark-grey;
+    text-decoration: none;
+    &:hover{
+        color: $aegean-blue
+    }
+}
 nav{
     border-bottom: solid 1px $grey;
     .list-container{
@@ -156,6 +174,7 @@ nav{
     }
     li {
         position: relative;
+        white-space: nowrap;
         a{
             color: $grey;
             font-size: $fs-normal
@@ -182,6 +201,11 @@ nav{
         }
     }
 }
+.dropdown-menu{
+    li:hover{
+        color: $aegean-blue
+    }
+}
 #search-section {
     ul.dropdown-menu{
         border: solid 1 px $aegean-blue;
@@ -205,12 +229,24 @@ nav{
 #dark-nav-section{
     nav{
         border-bottom: none;
-        i{
-            color: white
-        }
         li{
+            &:hover i{
+                transform: rotate(360deg);
+                color: $aegean-blue !important;
+            }
+            &:hover a{
+                color: $aegean-blue !important;
+            }
+        }
+        i,a{
             color: white
         }
+        a{
+            text-decoration: none;
+            transition: 1s;
+            
+        }
+
     }
 }
 

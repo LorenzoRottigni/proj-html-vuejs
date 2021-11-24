@@ -29,28 +29,33 @@
             </div>
         </section>
         <section id="recent-section" class="py-5 text-center">
-            <span @click="loadBack()" id="controller-page-back" class="bg-danger d-flex align-items-center justify-content-center">(:--</span>
+            <span @click="loadBack()" id="controller-page-back" class="bg-danger d-flex align-items-center justify-content-center">
+                <i class="fa fa-chevron-left fs-2 fw-normal"></i>
+            </span>
             <h3 class="text-center">Recent courses</h3>
-            <ul class="list-unstyled my-5 d-flex justify-content-center gap-3 text-aegean">
+            <ul class="list-unstyled my-5 d-flex justify-content-center flex-wrap gap-3 text-aegean">
                 <li :key="'category-'+index" v-for="(cat, index) in categories" 
-                @click="setActiveRecentCategory(cat.value);performCategoryCall(cat.value)">
-                    {{cat.textContent}}
+                @click="setActiveRecentCategory(cat.value);performCategoryCall(cat.value)"
+                :class="(cat.value === recentCategoryActive) ? 'active' : ''">
+                    {{cat.textContent}} <span v-if="cat.value === recentCategoryActive">  ~{{recentCategoryCounter}}</span>
                 </li>
             </ul>
             <ContentLoader :data="recentCategoryData" class="py-5"></ContentLoader>
-            <span @click="loadNext()" id="controller-page-next" class="bg-danger d-flex align-items-center justify-content-center" >--:)</span>
+            <span @click="loadNext()" id="controller-page-next" class="bg-danger d-flex align-items-center justify-content-center" >
+                <i class="fa fa-chevron-right  fs-2 fw-normal"></i>
+            </span>
         </section>
         <section id="subscribe-section" class="bg-danger py-5">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-4 offset-2">
+                    <div class="col-8 offset-2 col-md-4 offset-md-2">
                         <h4 class="text-white">Subscribe our newsletter</h4>  
                         <p class="text-white">
                             There are many variations of passages of Lorem Ipsum avaiable, but the majority have suffered 
                             alteration in some form, by injected humour, or randomized words.
                         </p>
                     </div>
-                    <div class="col-4">
+                    <div class="col-8 offset-2 col-md-4 offset-md-0">
                         <label for="emailInput" class="my-3 text-white">YOUR E-MAIL ADRESS</label>
                         <div class="input-group d-flex flex-nowrap">
                             <input id="emailinput" type="text" class="form-control form-control-lg rounded-0 bg-light-grey" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Enter Your E-Mail">
@@ -67,8 +72,8 @@
         </section>
         <section id="join-section" class="py-5">
             <div class="container-fluid">
-                <div class="row d-flex gap-3 justify-content-around">
-                    <div class="col-5 d-flex gap-3 align-items-center p-5">
+                <div class="row d-flex gap-3 flex-wrap justify-content-around">
+                    <div class="col-10 col-lg-5 d-flex gap-3 align-items-center p-5">
                         <img src="./../assets/instructor.png" alt="instructor img">
                         <div class=" d-flex flex-column gap-3">
                             <h4>Become an Instructor</h4>
@@ -76,7 +81,7 @@
                             <button class="btn btn-danger">START TEACHING</button>
                         </div>
                     </div>
-                    <div class="col-5 d-flex gap-3 align-items-center p-5">
+                    <div class="col-10 col-lg-5 d-flex gap-3 align-items-center p-5">
                         <img src="./../assets/business.png" alt="business img">
                         <div class=" d-flex flex-column gap-3">
                             <h4>Access For Business</h4>
@@ -90,16 +95,16 @@
         <section id="future-section" class="py-5">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-5 offset-2 py-5 my-5 bg-white">
-                        <h4>Investing for Your Future</h4>
-                        <p>
+                    <div class="col-5 offset-2 py-5 px-5 my-5 bg-white">
+                        <h4 class="pb-3">Investing for Your Future</h4>
+                        <p class="pb-5">
                             It is no exaggeration to say this MasterStudy experience was transformative-both professionally and personally
                             This workshop will long remain a high point of my life. Thanks again... i am feeling energized and eager to kt teaching
                             my class next week. I can't wait to use all of my new teaching tools. I will absolutely reccomend this workshop to
                             other educators!
                         </p>
                         <h5>Linda Green</h5>
-                        <h6>Product Manage, Apple inc.</h6>
+                        <h6>Product Manager, Apple inc.</h6>
                     </div>
                 </div>
             </div>
@@ -175,7 +180,7 @@ export default {
             developmentData : undefined,
             recentCategoryData : undefined,
             recentCategoryCounter : 1,
-            recentCategoryActive : undefined,
+            recentCategoryActive : 'recent',
             categories : [
                 {
                     textContent : 'All Categories',
@@ -383,7 +388,8 @@ h3{
         width: 3rem;
         height: 6rem;
         z-index: 99;
-        color: white
+        color: white;
+        cursor: pointer;
     }
     #controller-page-back{
         left: 0;
@@ -397,9 +403,13 @@ h3{
     }
 }
 #join-section{
-    .col-5{
+    .col-10.col-lg-5{
         border: solid 1px $grey
     }
+    img{
+        width: 40%;
+    }
+
 }
 #future-section{
     background-image: url('./../assets/testimonial-1-1917x640-1-1914x639.jpg');
