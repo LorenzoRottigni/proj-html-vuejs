@@ -29,19 +29,16 @@
             </div>
         </section>
         <section id="recent-section" class="py-5 text-center">
+            <span @click="loadBack()" id="controller-page-back" class="bg-danger d-flex align-items-center justify-content-center">(:--</span>
             <h3 class="text-center">Recent courses</h3>
             <ul class="list-unstyled my-5 d-flex justify-content-center gap-3 text-aegean">
-                <li @click="performCategoryCall('recent')" class="active">All Categories</li>
-                <li @click="performCategoryCall('business')">Business</li>
-                <li @click="performCategoryCall('design')">Design</li>
-                <li @click="performCategoryCall('development')">Development</li>
-                <li @click="performCategoryCall('software')">IT & Software</li>
-                <li @click="performCategoryCall('lifestyle')">Lifestyle</li>
-                <li @click="performCategoryCall('marketing')">Marketing</li>
-                <li @click="performCategoryCall('productivity')">Office Productivity</li>
+                <li :key="'category-'+index" v-for="(cat, index) in categories" 
+                @click="setActiveRecentCategory(cat.value);performCategoryCall(cat.value)">
+                    {{cat.textContent}}
+                </li>
             </ul>
             <ContentLoader :data="recentCategoryData" class="py-5"></ContentLoader>
-            <button class="btn btn-danger">SHOW ALL</button>
+            <span @click="loadNext()" id="controller-page-next" class="bg-danger d-flex align-items-center justify-content-center" >--:)</span>
         </section>
         <section id="subscribe-section" class="bg-danger py-5">
             <div class="container-fluid">
@@ -176,7 +173,43 @@ export default {
             popularData : undefined,
             recentData : undefined,
             developmentData : undefined,
-            recentCategoryData : undefined
+            recentCategoryData : undefined,
+            recentCategoryCounter : 1,
+            recentCategoryActive : undefined,
+            categories : [
+                {
+                    textContent : 'All Categories',
+                    value : 'recent'
+                },
+                {
+                    textContent : 'Business',
+                    value : 'business'
+                },
+                {
+                    textContent : 'Design',
+                    value : 'design'
+                },
+                {
+                    textContent : 'Development',
+                    value : 'development'
+                },
+                {
+                    textContent : 'IT & Software',
+                    value : 'software'
+                },
+                {
+                    textContent : 'Lifestyle',
+                    value : 'lifestyle'
+                },
+                {
+                    textContent : 'Marketing',
+                    value : 'marketing'
+                },
+                {
+                    textContent : 'Office Productivity',
+                    value : 'productivity'
+                }
+            ]
             //popularData : require('./../data/udemy-popular-data.json')
         }
     },
@@ -203,30 +236,57 @@ export default {
         performPopularCall(){
             axios.get(`/popular`).then((response) => {
                 this.popularData = this.dataFetcher(response.data.results, 'Popular')
+            }).catch((e) => {
+                alert(`error: ${e}`)
             });
         },
         performRecentCall(){
             axios.get(`/recent`).then((response) => {
                 this.recentData = this.dataFetcher(response.data.results, 'Recent')
+            }).catch((e) => {
+                alert(`error: ${e}`)
             });
         },
         performDevelopmentCall(){
             axios.get(`/development`).then((response) => {
                 this.developmentData = this.dataFetcher(response.data.results, 'Development')
+            }).catch((e) => {
+                alert(`error: ${e}`)
             });
         },
         performCategoryCall(category){
             let url = '';
             if(category === 'recent')
-                url = `/${category}`
+                url = `/${category}/${this.recentCategoryCounter}`
+            else if(!category)
+                url = `/recent/${this.recentCategoryCounter}`
             else
-                url  = `/recent-${category}`
+                url  = `/recent-${category}/${this.recentCategoryCounter}`
 
             console.log(url);
             axios.get(url).then((response) => {
                 this.recentCategoryData = this.dataFetcher(response.data.results, category)
+            }).catch((e) => {
+                alert(`error: ${e}`)
             });
         },
+        loadNext(){
+            console.log('loading next...');
+            this.recentCategoryCounter++
+            console.log(this.recentCategoryCounter);
+            this.performCategoryCall(this.recentCategoryActive)
+        },
+        loadBack(){
+            if(this.recentCategoryCounter > 1){
+                this.recentCategoryCounter--
+                console.log(this.recentCategoryCounter);
+                this.performCategoryCall(this.recentCategoryActive)
+            }
+        },
+        setActiveRecentCategory(category){
+            this.recentCategoryActive = category
+            this.recentCategoryCounter = 1
+        }
 
     },
     computed : {
@@ -306,6 +366,7 @@ h3{
     background-position: center;
 }
 #recent-section{
+    position: relative;
     .active{
         background-color: $light-grey;
         color: $grey;
@@ -314,6 +375,25 @@ h3{
     li{
         padding: 0.5rem 1rem;
         cursor: pointer
+    }
+    #controller-page-back, #controller-page-next{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 3rem;
+        height: 6rem;
+        z-index: 99;
+        color: white
+    }
+    #controller-page-back{
+        left: 0;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+    #controller-page-next{
+        right: 0;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
     }
 }
 #join-section{
