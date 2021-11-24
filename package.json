@@ -7,7 +7,8 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "express": "vue-cli-service express:watch",
-    "express:run": "vue-cli-service express:run"
+    "express:run": "vue-cli-service express:run",
+    "build_push": "npm run build && git add . && git commit -n -m 'Created/Updated build' && git push"
   },
   "dependencies": {
     "@popperjs/core": "^2.10.2",
