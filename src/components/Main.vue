@@ -12,12 +12,12 @@
             <!--<ContentLoader :data="courses" class="py-5"></ContentLoader>-->
             <ContentLoader :data="developmentData" class="py-5"></ContentLoader>
         </section>
-        <section id="banner-section" class="d-flex align-items-center">
+        <section id="banner-section" class="d-flex align-items-center py-5">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-4 offset-2 text-container">
                         <h1 class="fw-bold">
-                            Limitless learning, <br>
+                            Limitless learning,
                             more possibilities
                         </h1>
                         <h2 class="py-3">
@@ -31,16 +31,16 @@
         <section id="recent-section" class="py-5 text-center">
             <h3 class="text-center">Recent courses</h3>
             <ul class="list-unstyled my-5 d-flex justify-content-center gap-3 text-aegean">
-                <li class="active">All Categories</li>
-                <li>Business</li>
-                <li>Design</li>
-                <li>Development</li>
-                <li>IT & Software</li>
-                <li>Lifestyle</li>
-                <li>Marketing</li>
-                <li>Office Productivity</li>
+                <li @click="performCategoryCall('recent')" class="active">All Categories</li>
+                <li @click="performCategoryCall('business')">Business</li>
+                <li @click="performCategoryCall('design')">Design</li>
+                <li @click="performCategoryCall('development')">Development</li>
+                <li @click="performCategoryCall('software')">IT & Software</li>
+                <li @click="performCategoryCall('lifestyle')">Lifestyle</li>
+                <li @click="performCategoryCall('marketing')">Marketing</li>
+                <li @click="performCategoryCall('productivity')">Office Productivity</li>
             </ul>
-            <ContentLoader :data="recentData" class="py-5"></ContentLoader>
+            <ContentLoader :data="recentCategoryData" class="py-5"></ContentLoader>
             <button class="btn btn-danger">SHOW ALL</button>
         </section>
         <section id="subscribe-section" class="bg-danger py-5">
@@ -70,20 +70,20 @@
         </section>
         <section id="join-section" class="py-5">
             <div class="container-fluid">
-                <div class="row d-flex justify-content-around">
+                <div class="row d-flex gap-3 justify-content-around">
                     <div class="col-5 d-flex gap-3 align-items-center p-5">
                         <img src="./../assets/instructor.png" alt="instructor img">
-                        <div class=" d-flex flex-column">
+                        <div class=" d-flex flex-column gap-3">
                             <h4>Become an Instructor</h4>
-                            <h4>Teach what you love. Masterstudy gives you the tools to create a course</h4>
+                            <p>Teach what you love. Masterstudy gives you the tools to create a course</p>
                             <button class="btn btn-danger">START TEACHING</button>
                         </div>
                     </div>
                     <div class="col-5 d-flex gap-3 align-items-center p-5">
                         <img src="./../assets/business.png" alt="business img">
-                        <div class=" d-flex flex-column">
+                        <div class=" d-flex flex-column gap-3">
                             <h4>Access For Business</h4>
-                            <h4>Get unlimited access to 2,500 of top courses for your team</h4>
+                            <p>Get unlimited access to 2,500 of top courses for your team</p>
                             <button class="btn btn-danger">DOING BUSINESS</button>
                         </div>
                     </div>
@@ -175,73 +175,59 @@ export default {
             //recentData : require('./../data/udemy-recent-data.json'),
             popularData : undefined,
             recentData : undefined,
-            developmentData : undefined
+            developmentData : undefined,
+            recentCategoryData : undefined
             //popularData : require('./../data/udemy-popular-data.json')
         }
     },
     mounted(){
-        this.popularData = this.performPopularCall()
-        this.recentData = this.performRecentCall()
-        this.developmentData = this.performDevelopmentCall()
-        console.log(this.performPopularCall())
-        console.log(this.performRecentCall());
-        console.log(this.performDevelopmentCall());
+        this.performPopularCall()
+        this.performCategoryCall('recent')
+        this.performDevelopmentCall()
     },
     methods : {
-        performPopularCall(){
-            axios.get(`http://localhost:3000/popular`).then((response) => {
-                console.dir(response.data.results )
-                const dataArray = [ ];
-                for (let index = 0; index < response.data.results.length; index++) {
+        dataFetcher(callResult, cat){
+            const dataArray = [ ];
+            for (let index = 0; index < callResult.length; index++) {
                     dataArray.push({
-                        title : response.data.results[index].title,
-                        src : response.data.results[index].image_480x270,
-                        category : 'Development',
+                        title : callResult[index].title,
+                        src : callResult[index].image_480x270,
+                        category : cat,
                         rated : Math.floor(Math.random()*5),
-                        price : response.data.results[index].price,
+                        price : callResult[index].price,
                         discountedPrice : '50$'
                     })
-                    console.log(dataArray[index])
-                }
-                this.popularData = dataArray
+            }
+            return dataArray
+        },
+        performPopularCall(){
+            axios.get(`/popular`).then((response) => {
+                this.popularData = this.dataFetcher(response.data.results, 'Popular')
             });
         },
         performRecentCall(){
-            axios.get(`http://localhost:3000/recent`).then((response) => {
-                console.dir(response.data.results )
-                const dataArray = [ ];
-                for (let index = 0; index < response.data.results.length; index++) {
-                    dataArray.push({
-                        title : response.data.results[index].title,
-                        src : response.data.results[index].image_480x270,
-                        category : 'Development',
-                        rated : Math.floor(Math.random()*5),
-                        price : response.data.results[index].price,
-                        discountedPrice : '50$'
-                    })
-                    console.log(dataArray[index])
-                }
-                this.recentData = dataArray
+            axios.get(`/recent`).then((response) => {
+                this.recentData = this.dataFetcher(response.data.results, 'Recent')
             });
         },
         performDevelopmentCall(){
-            axios.get(`http://localhost:3000/development`).then((response) => {
-                console.dir(response.data.results )
-                const dataArray = [ ];
-                for (let index = 0; index < response.data.results.length; index++) {
-                    dataArray.push({
-                        title : response.data.results[index].title,
-                        src : response.data.results[index].image_480x270,
-                        category : 'Development',
-                        rated : Math.floor(Math.random()*5),
-                        price : response.data.results[index].price,
-                        discountedPrice : '50$'
-                    })
-                    console.log(dataArray[index])
-                }
-                this.developmentData = dataArray
+            axios.get(`/development`).then((response) => {
+                this.developmentData = this.dataFetcher(response.data.results, 'Development')
             });
-        }
+        },
+        performCategoryCall(category){
+            let url = '';
+            if(category === 'recent')
+                url = `/${category}`
+            else
+                url  = `/recent-${category}`
+
+            console.log(url);
+            axios.get(url).then((response) => {
+                this.recentCategoryData = this.dataFetcher(response.data.results, category)
+            });
+        },
+
     },
     computed : {
         /*getDevelopmentData(){
@@ -310,17 +296,14 @@ h3{
 #partner-section{
     img{
         clip-path: polygon(0 0, 100% 0, 100% 100%, 32% 100%);
-        max-width: 50%;
-        height: 400px;
+        max-width: 40%;
     }
 }
 #banner-section{
-    height: 400px;
     background-image: url('./../assets/bg.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    white-space: pre-line !important;
 }
 #recent-section{
     .active{
@@ -329,7 +312,8 @@ h3{
         border-radius: 15px;
     }
     li{
-        padding: 0.5rem 1rem
+        padding: 0.5rem 1rem;
+        cursor: pointer
     }
 }
 #join-section{
