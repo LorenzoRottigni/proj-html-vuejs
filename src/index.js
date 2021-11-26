@@ -17,8 +17,6 @@ export default (app) => {
     //res.json({msg: response.data});  
    });
    app.get('/popular', (req, res) => {
-     //const category = req.params.category dallaltraparte /
-     //console.log(req.params.pagination)
      const url = 'https://www.udemy.com/api-2.0/courses?ordering=highest-rated'
       axios.get(`${url}`, { 'headers': headers}).then((response) => {
         res.send(response.data)
